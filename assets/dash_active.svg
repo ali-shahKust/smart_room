@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="49" viewBox="0 0 49 49">
+  <defs>
+    <filter id="scale-white-color-0" x="-20" y="-20" width="109" height="109" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feFlood flood-color="#080821" flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#scale-white-color-0)">
+        <rect id="scale-white-color-0-2" data-name="scale-white-color-0" width="49" height="49" rx="10" fill="#1414fe"/>
+      </g>
+    </clipPath>
+  </defs>
+  <g id="Group_1633" data-name="Group 1633" transform="translate(-30 -724)">
+    <g id="Group_1632" data-name="Group 1632" transform="translate(-25 57)">
+      <rect id="scale-white-color-0-3" data-name="scale-white-color-0" width="49" height="49" rx="10" transform="translate(55 667)" fill="#f3f3f6"/>
+      <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(55 667)" clip-path="url(#clip-path)">
+        <g id="scale-white-color-0-4" data-name="scale-white-color-0" fill="none" stroke="#080821" stroke-width="4" opacity="0.16">
+          <rect width="55.125" height="55.125" rx="10" stroke="none"/>
+          <rect x="2" y="2" width="51.125" height="51.125" rx="8" fill="none"/>
+        </g>
+        <g id="scale-white-color-0-5" data-name="scale-white-color-0" transform="translate(-6.125 -6.125)" fill="none" stroke="#fff" stroke-width="4">
+          <rect width="55.125" height="55.125" rx="20" stroke="none"/>
+          <rect x="2" y="2" width="51.125" height="51.125" rx="18" fill="none"/>
+        </g>
+      </g>
+      <g id="scale-white-color-0-6" data-name="scale-white-color-0" transform="translate(55 667)" fill="none" stroke="#ebebeb" stroke-width="0.5" opacity="0.6">
+        <rect width="49" height="49" rx="10" stroke="none"/>
+        <rect x="0.25" y="0.25" width="48.5" height="48.5" rx="9.75" fill="none"/>
+      </g>
+    </g>
+    <g id="dashboard" transform="translate(47 741)">
+      <path id="Path_265" data-name="Path 265" d="M6.093,0H1.153A1.154,1.154,0,0,0,0,1.153V4.117A1.154,1.154,0,0,0,1.153,5.27H6.093A1.154,1.154,0,0,0,7.246,4.117V1.153A1.154,1.154,0,0,0,6.093,0Zm0,0" fill="#22aae2"/>
+      <path id="Path_266" data-name="Path 266" d="M6.093,213.332H1.153A1.154,1.154,0,0,0,0,214.485V221.4a1.154,1.154,0,0,0,1.153,1.153H6.093A1.154,1.154,0,0,0,7.246,221.4v-6.917A1.154,1.154,0,0,0,6.093,213.332Zm0,0" transform="translate(0 -206.745)" fill="#22aae2"/>
+      <path id="Path_267" data-name="Path 267" d="M283.425,341.332h-4.941a1.154,1.154,0,0,0-1.153,1.153v2.964a1.154,1.154,0,0,0,1.153,1.153h4.941a1.154,1.154,0,0,0,1.153-1.153v-2.964A1.154,1.154,0,0,0,283.425,341.332Zm0,0" transform="translate(-268.768 -330.792)" fill="#22aae2"/>
+      <path id="Path_268" data-name="Path 268" d="M283.425,0h-4.941a1.154,1.154,0,0,0-1.153,1.153V8.07a1.154,1.154,0,0,0,1.153,1.153h4.941a1.154,1.154,0,0,0,1.153-1.153V1.153A1.154,1.154,0,0,0,283.425,0Zm0,0" transform="translate(-268.768)" fill="#22aae2"/>
+    </g>
+  </g>
+</svg>

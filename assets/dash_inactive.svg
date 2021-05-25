@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="97" height="97" viewBox="0 0 97 97">
+  <defs>
+    <filter id="scale-white-color-0" x="12" y="12" width="85" height="85" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#080821" flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="scale-white-color-0-2" x="0" y="0" width="85" height="85" filterUnits="userSpaceOnUse">
+      <feOffset dx="-6" dy="-6" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.702"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="-0.062" y1="-0.136" x2="0.378" y2="0.386" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-opacity="0.302"/>
+      <stop offset="1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_1740" data-name="Group 1740" transform="translate(-6 -299)">
+    <g id="up_light_btn" transform="translate(29.745 322.611)">
+      <g id="Group_38" data-name="Group 38" transform="translate(0 0)">
+        <g transform="matrix(1, 0, 0, 1, -23.75, -23.61)" filter="url(#scale-white-color-0)">
+          <rect id="scale-white-color-0-3" data-name="scale-white-color-0" width="49" height="49" rx="20" transform="translate(24 24)" fill="#f3f3f6"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -23.75, -23.61)" filter="url(#scale-white-color-0-2)">
+          <rect id="scale-white-color-0-4" data-name="scale-white-color-0" width="49" height="49" rx="10" transform="translate(24 24)" fill="#f3f3f6"/>
+        </g>
+      </g>
+      <g id="scale-white-color-0-5" data-name="scale-white-color-0" transform="translate(0.255 0.389)" fill="none" stroke="#ebebeb" stroke-width="0.5" opacity="0.16">
+        <rect width="49" height="49" rx="20" stroke="none"/>
+        <rect x="0.25" y="0.25" width="48.5" height="48.5" rx="19.75" fill="none"/>
+      </g>
+      <rect id="scale-white-color-0-6" data-name="scale-white-color-0" width="49" height="49" rx="10" transform="translate(0.255 0.389)" opacity="0.1" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="dashboard" transform="translate(47 340)">
+      <path id="Path_265" data-name="Path 265" d="M6.093,0H1.153A1.154,1.154,0,0,0,0,1.153V4.117A1.154,1.154,0,0,0,1.153,5.27H6.093A1.154,1.154,0,0,0,7.246,4.117V1.153A1.154,1.154,0,0,0,6.093,0Zm0,0" fill="#9eb0ba"/>
+      <path id="Path_266" data-name="Path 266" d="M6.093,213.332H1.153A1.154,1.154,0,0,0,0,214.485V221.4a1.154,1.154,0,0,0,1.153,1.153H6.093A1.154,1.154,0,0,0,7.246,221.4v-6.917A1.154,1.154,0,0,0,6.093,213.332Zm0,0" transform="translate(0 -206.745)" fill="#9eb0ba"/>
+      <path id="Path_267" data-name="Path 267" d="M283.425,341.332h-4.941a1.154,1.154,0,0,0-1.153,1.153v2.964a1.154,1.154,0,0,0,1.153,1.153h4.941a1.154,1.154,0,0,0,1.153-1.153v-2.964A1.154,1.154,0,0,0,283.425,341.332Zm0,0" transform="translate(-268.768 -330.792)" fill="#9eb0ba"/>
+      <path id="Path_268" data-name="Path 268" d="M283.425,0h-4.941a1.154,1.154,0,0,0-1.153,1.153V8.07a1.154,1.154,0,0,0,1.153,1.153h4.941a1.154,1.154,0,0,0,1.153-1.153V1.153A1.154,1.154,0,0,0,283.425,0Zm0,0" transform="translate(-268.768)" fill="#9eb0ba"/>
+    </g>
+  </g>
+</svg>
