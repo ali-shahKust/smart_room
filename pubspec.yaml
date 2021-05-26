@@ -32,7 +32,8 @@ dependencies:
   flex_color_picker: ^2.0.1
   percent_indicator: ^3.0.1
   google_fonts: ^2.1.0
-  syncfusion_flutter_charts: ^19.1.65
+  fl_animated_linechart: ^1.1.4
+  flutter_neumorphic: ^3.1.0
 
 
 dev_dependencies:

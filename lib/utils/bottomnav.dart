@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_room/res.dart';
+import 'package:smart_room/screens/daily_dairy.dart';
 import 'package:smart_room/screens/dashboard.dart';
 import 'package:smart_room/screens/home.dart';
 import 'package:smart_room/screens/viewPage.dart';
@@ -23,7 +24,7 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
   void initState() {
     // TODO: implement initState
     _tabs = [
-      Dashboard(),ViewPage(),Dashboard(),HomePage(),Dashboard()
+      Dashboard(),ViewPage(),Dashboard(),HomePage(),DailyDairy()
     ];
 
     super.initState();

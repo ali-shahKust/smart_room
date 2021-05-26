@@ -78,6 +78,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "6.1.1"
+  fl_animated_linechart:
+    dependency: "direct main"
+    description:
+      name: fl_animated_linechart
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.4"
   flex_color_picker:
     dependency: "direct main"
     description:
@@ -90,6 +97,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_neumorphic:
+    dependency: "direct main"
+    description:
+      name: flutter_neumorphic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.0"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -129,7 +143,7 @@ packages:
       name: intl
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.17.0"
+    version: "0.16.1"
   matcher:
     dependency: transitive
     description:
@@ -275,20 +289,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  syncfusion_flutter_charts:
-    dependency: "direct main"
-    description:
-      name: syncfusion_flutter_charts
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "19.1.65"
-  syncfusion_flutter_core:
-    dependency: transitive
-    description:
-      name: syncfusion_flutter_core
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "19.1.65"
   term_glyph:
     dependency: transitive
     description:
