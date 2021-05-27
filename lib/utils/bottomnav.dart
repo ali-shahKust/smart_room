@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:holding_gesture/holding_gesture.dart';
 import 'package:smart_room/res.dart';
+import 'package:smart_room/screens/chat.dart';
 import 'package:smart_room/screens/daily_dairy.dart';
 import 'package:smart_room/screens/dashboard.dart';
 import 'package:smart_room/screens/home.dart';
@@ -16,7 +18,7 @@ class Bottom_Nav_Page extends StatefulWidget {
 
 class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
   List<Object> _tabs;
-
+  String mIcon = Res.mic;
   int _page = 0;
   GlobalKey _bottomNavigationKey = GlobalKey();
 
@@ -24,7 +26,7 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
   void initState() {
     // TODO: implement initState
     _tabs = [
-      Dashboard(),ViewPage(),Dashboard(),HomePage(),DailyDairy()
+      Dashboard(),ViewPage(),HomePage(),DailyDairy()
     ];
 
     super.initState();
@@ -43,103 +45,91 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
         _willPopCallback();
       },
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
+        bottomNavigationBar:BottomAppBar(
           elevation: 0,
-          backgroundColor: Color(0xffF3F3F6),
-          //   selectedItemColor: CustomTheme.buttonclr,
-          unselectedItemColor: Colors.grey,
-          key: _bottomNavigationKey,
+          color: Apptheme.background,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
 
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: _page == 0
-                    ? Container(
-                        width: 60,
-                        height: 60,
-                        child: SvgPicture.asset(Res.dash_active),
-                      )
-                    : Container(
-                  width: 60,
-                  height: 60,
-                        child: SvgPicture.asset(Res.dash_inactive),
-                      ),
-                title: Text(
-                  '',
-                  style: TextStyle(color: Colors.white),
-                )),
-            BottomNavigationBarItem(
-                icon: _page == 1
-                    ? Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.viewpage_active),
-                )
-                    : Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.viewpage_inactive),
-                ),
-                title: Text(
-                  '',
-                  style: TextStyle(color: Colors.white,fontSize: 12),
-                )),
-            BottomNavigationBarItem(
-                icon: _page == 2
-                    ? Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.mic_pressed),
-                )
-                    : Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.mic),
-                ),
-                title: Text(
-                  '',
-                  style: TextStyle(color: Colors.white),
-                )),
-            BottomNavigationBarItem(
-                icon: _page == 3
-                    ? Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.home_active),
-                )
-                    : Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.home_inactive),
-                ),
-                title: Text(
-                  '',
-                  style: TextStyle(color: Colors.white),
-                )),
-            BottomNavigationBarItem(
-                icon: _page == 4
-                    ? Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.setting_inactive),
-                )
-                    : Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(Res.setting_inactive),
-                ),
-                title: Text(
-                  '',
-                  style: TextStyle(color: Colors.white),
-                ))
-          ],
-          type: BottomNavigationBarType.fixed,
+                 GestureDetector(
+                   onTap: (){
+                     setState(() {
+                       _page = 0;
 
-          currentIndex: _page,
-          onTap: (index) {
-            setState(() {
-              _page = index;
-            });
-          },
+                     });
+                   },
+                   child: Container(
+                width: 60,
+                height: 60,
+                child: _page == 0?SvgPicture.asset(Res.dash_active):SvgPicture.asset(Res.dash_inactive),
+              ),
+                 ),
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    _page = 1;
+
+                  });
+                },
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  child: _page == 1?SvgPicture.asset(Res.viewpage_active):SvgPicture.asset(Res.viewpage_inactive),
+                ),
+              ),
+              GestureDetector(
+
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatTwoPage()));
+                },
+                onTapDown: (val){
+                  setState(() {
+                    mIcon = Res.mic_pressed;
+
+                  });
+                },
+                onTapUp: (val){
+                  setState(() {
+                    mIcon = Res.mic;
+                  });
+                },
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  child: SvgPicture.asset(mIcon),
+                ),
+              ),
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    _page = 2;
+
+                  });
+                },
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  child: _page == 2?SvgPicture.asset(Res.home_active):SvgPicture.asset(Res.home_inactive),
+                ),
+              ),
+              GestureDetector(
+                onTap: (){
+                  setState(() {
+                    _page = 3;
+
+                  });
+                },
+                child: Container(
+                  width: 60,
+                  height: 60,
+                  child: _page == 3?SvgPicture.asset(Res.setting_inactive):SvgPicture.asset(Res.setting_inactive),
+                ),
+              ),
+
+
+            ],
+          ),
         ),
         body: _tabs[_page],
       ),
