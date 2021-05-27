@@ -302,7 +302,7 @@ class _DailyDairyState extends State<DailyDairy> {
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
-                        color: controller.positions.isNotEmpty&&controller.offset>650&&controller.offset<720?Colors.white:Apptheme.container.withOpacity(0.7)
+                        color: controller.positions.isNotEmpty&&controller.offset>650&&controller.offset<690?Colors.white:Apptheme.container.withOpacity(0.7)
                     ),
                     child:  Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -383,7 +383,7 @@ class _DailyDairyState extends State<DailyDairy> {
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
-                        color: controller.positions.isNotEmpty&&controller.offset>720?Colors.white:Apptheme.container.withOpacity(0.7)
+                        color: controller.positions.isNotEmpty&&controller.offset>690?Colors.white:Apptheme.container.withOpacity(0.7)
                     ),
                     child:  Padding(
                       padding: const EdgeInsets.all(12.0),
