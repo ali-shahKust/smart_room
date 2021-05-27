@@ -14,6 +14,8 @@ class _DailyDairyState extends State<DailyDairy> {
   var _selected=-1 ;
   var _productive = 2;
   var _focus = 1;
+  var _overAll =3 ;
+  var _due = 4;
   ScrollController controller= ScrollController();
   @override
   void initState() {
@@ -52,10 +54,10 @@ class _DailyDairyState extends State<DailyDairy> {
                   padding: const EdgeInsets.symmetric(vertical:5.0),
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height/3,
+
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(22),
-                     color: controller.positions.isNotEmpty&&controller.offset>25?Apptheme.container.withOpacity(0.7):Colors.white
+                     color: controller.positions.isNotEmpty&&controller.offset>60?Apptheme.container.withOpacity(0.7):Colors.white
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -127,85 +129,85 @@ class _DailyDairyState extends State<DailyDairy> {
                     ),
                   ),
                 ),
+
+
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical:5.0),
 
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height/3,
+
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
-                        color: controller.positions.isNotEmpty&&controller.offset>50&&controller.offset<120?Colors.white:Apptheme.container.withOpacity(0.7)
+                        color: controller.positions.isNotEmpty&&controller.offset>115&&controller.offset<300?Colors.white:Apptheme.container.withOpacity(0.7)
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(12.0),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('How focus were you today?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
-                            Row(
-                              children: [
-                                Theme(data: ThemeData(
-                                    radioTheme: RadioThemeData(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('How focus were you today?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
+                          Row(
+                            children: [
+                              Theme(data: ThemeData(
+                                  radioTheme: RadioThemeData(
 
-                                    )
-                                ),
-                                    child: Radio(
-                                      overlayColor: MaterialStateProperty.all(Colors.white),
-                                      onChanged: (value) {
-                                        _focus = value;
-                                        setState(() {
+                                  )
+                              ),
+                                  child: Radio(
+                                    overlayColor: MaterialStateProperty.all(Colors.white),
+                                    onChanged: (value) {
+                                      _focus = value;
+                                      setState(() {
 
-                                        });
-                                      }, value: 1, groupValue: _focus,)),
-                                Text('Very Unfocused',style: iUtills.normaltyleText,)
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(
-                                  onChanged: (value) {   _focus = value;
-                                        setState(() {
+                                      });
+                                    }, value: 1, groupValue: _focus,)),
+                              Text('Very Unfocused',style: iUtills.normaltyleText,)
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(
+                                onChanged: (value) {   _focus = value;
+                                      setState(() {
 
-                                        }); }, value: 2, groupValue: _focus,),
-                                Text('Unfocused',style: iUtills.normaltyleText,)
+                                      }); }, value: 2, groupValue: _focus,),
+                              Text('Unfocused',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _focus = value;
-                                setState(() {
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _focus = value;
+                              setState(() {
 
-                                }); }, value: 3, groupValue: _focus,),
-                                Text('Nuetral',style: iUtills.normaltyleText,)
+                              }); }, value: 3, groupValue: _focus,),
+                              Text('Nuetral',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _focus = value;
-                                setState(() {
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _focus = value;
+                              setState(() {
 
-                                }); }, value: 4, groupValue: _focus,),
-                                Text('Focused',style: iUtills.normaltyleText,)
+                              }); }, value: 4, groupValue: _focus,),
+                              Text('Focused',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _focus = value;
-                                setState(() {
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _focus = value;
+                              setState(() {
 
-                                }); }, value: 5, groupValue: _focus,),
-                                Text('Very Focused',style: iUtills.normaltyleText,)
+                              }); }, value: 5, groupValue: _focus,),
+                              Text('Very Focused',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
+                            ],
+                          ),
 
-                          ],
-                        ),
+                        ],
                       ),
                     ),
 
@@ -216,80 +218,78 @@ class _DailyDairyState extends State<DailyDairy> {
 
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height/3,
+
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
-                        color: controller.positions.isNotEmpty&&controller.offset>120&&controller.offset<320?Colors.white:Apptheme.container.withOpacity(0.7)
+                        color: controller.positions.isNotEmpty&&controller.offset>300&&controller.offset<650?Colors.white:Apptheme.container.withOpacity(0.7)
                     ),
                     child:  Padding(
                       padding: const EdgeInsets.all(12.0),
-                      child: SingleChildScrollView(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('How Productive were you today?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
-                            Row(
-                              children: [
-                                Theme(data: ThemeData(
-                                    radioTheme: RadioThemeData(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('How Productive were you today?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
+                          Row(
+                            children: [
+                              Theme(data: ThemeData(
+                                  radioTheme: RadioThemeData(
 
-                                    )
-                                ),
-                                    child: Radio(
-                                      overlayColor: MaterialStateProperty.all(Colors.white),
-                                      onChanged: (value) {
-                                        _productive = value;
-                                        setState(() {
+                                  )
+                              ),
+                                  child: Radio(
+                                    overlayColor: MaterialStateProperty.all(Colors.white),
+                                    onChanged: (value) {
+                                      _productive = value;
+                                      setState(() {
 
-                                        });
-                                      }, value: 1, groupValue: _productive,)),
-                                Text('Very Unproductive',style: iUtills.normaltyleText,)
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(
-                                  onChanged: (value) {   _productive = value;
-                                  setState(() {
-
-                                  }); }, value: 2, groupValue: _productive,),
-                                Text('Unproductive',style: iUtills.normaltyleText,)
-
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
+                                      });
+                                    }, value: 1, groupValue: _productive,)),
+                              Text('Very Unproductive',style: iUtills.normaltyleText,)
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(
+                                onChanged: (value) {   _productive = value;
                                 setState(() {
 
-                                }); }, value: 3, groupValue: _productive,),
-                                Text('Nuetral',style: iUtills.normaltyleText,)
+                                }); }, value: 2, groupValue: _productive,),
+                              Text('Unproductive',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
-                                setState(() {
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _productive = value;
+                              setState(() {
 
-                                }); }, value: 4, groupValue: _productive,),
-                                Text('Productive',style: iUtills.normaltyleText,)
+                              }); }, value: 3, groupValue: _productive,),
+                              Text('Nuetral',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
-                                setState(() {
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _productive = value;
+                              setState(() {
 
-                                }); }, value: 5, groupValue: _productive,),
-                                Text('Very Productive',style: iUtills.normaltyleText,)
+                              }); }, value: 4, groupValue: _productive,),
+                              Text('Productive',style: iUtills.normaltyleText,)
 
-                              ],
-                            ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _productive = value;
+                              setState(() {
 
-                          ],
-                        ),
+                              }); }, value: 5, groupValue: _productive,),
+                              Text('Very Productive',style: iUtills.normaltyleText,)
+
+                            ],
+                          ),
+
+                        ],
                       ),
                     ),
 
@@ -300,10 +300,90 @@ class _DailyDairyState extends State<DailyDairy> {
 
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height/3,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(22),
-                        color: controller.positions.isNotEmpty&&controller.offset>320&&controller.offset<520?Colors.white:Apptheme.container.withOpacity(0.7)
+                        color: controller.positions.isNotEmpty&&controller.offset>650&&controller.offset<720?Colors.white:Apptheme.container.withOpacity(0.7)
+                    ),
+                    child:  Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Overall, was today a good day?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
+                          Row(
+                            children: [
+                              Theme(data: ThemeData(
+                                  radioTheme: RadioThemeData(
+
+                                  )
+                              ),
+                                  child: Radio(
+                                    overlayColor: MaterialStateProperty.all(Colors.white),
+                                    onChanged: (value) {
+                                      _overAll = value;
+                                      setState(() {
+
+                                      });
+                                    }, value: 1, groupValue: _overAll,)),
+                              Text('Not at all',style: iUtills.normaltyleText,)
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(
+                                onChanged: (value) {   _overAll = value;
+                                setState(() {
+
+                                }); }, value: 2, groupValue: _overAll,),
+                              Text('Not much',style: iUtills.normaltyleText,)
+
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _overAll = value;
+                              setState(() {
+
+                              }); }, value: 3, groupValue: _overAll,),
+                              Text('Nuetral',style: iUtills.normaltyleText,)
+
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _overAll = value;
+                              setState(() {
+
+                              }); }, value: 4, groupValue: _overAll,),
+                              Text('Somewhat',style: iUtills.normaltyleText,)
+
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Radio(onChanged: (value) {   _overAll = value;
+                              setState(() {
+
+                              }); }, value: 5, groupValue: _overAll,),
+                              Text('Very much so',style: iUtills.normaltyleText,)
+
+                            ],
+                          ),
+
+                        ],
+                      ),
+                    ),
+
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical:5.0),
+
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(22),
+                        color: controller.positions.isNotEmpty&&controller.offset>720?Colors.white:Apptheme.container.withOpacity(0.7)
                     ),
                     child:  Padding(
                       padding: const EdgeInsets.all(12.0),
@@ -311,7 +391,6 @@ class _DailyDairyState extends State<DailyDairy> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('How Productive were you today?',style: GoogleFonts.poppins(fontWeight: FontWeight.w500,fontSize: 18,),),
                             Row(
                               children: [
                                 Theme(data: ThemeData(
@@ -322,53 +401,12 @@ class _DailyDairyState extends State<DailyDairy> {
                                     child: Radio(
                                       overlayColor: MaterialStateProperty.all(Colors.white),
                                       onChanged: (value) {
-                                        _productive = value;
+                                        _due = value;
                                         setState(() {
 
                                         });
-                                      }, value: 1, groupValue: _productive,)),
-                                Text('Very Unproductive',style: iUtills.normaltyleText,)
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(
-                                  onChanged: (value) {   _productive = value;
-                                  setState(() {
-
-                                  }); }, value: 2, groupValue: _productive,),
-                                Text('Unproductive',style: iUtills.normaltyleText,)
-
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
-                                setState(() {
-
-                                }); }, value: 3, groupValue: _productive,),
-                                Text('Nuetral',style: iUtills.normaltyleText,)
-
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
-                                setState(() {
-
-                                }); }, value: 4, groupValue: _productive,),
-                                Text('Productive',style: iUtills.normaltyleText,)
-
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                Radio(onChanged: (value) {   _productive = value;
-                                setState(() {
-
-                                }); }, value: 5, groupValue: _productive,),
-                                Text('Very Productive',style: iUtills.normaltyleText,)
-
+                                      }, value: 1, groupValue: _due,)),
+                                Text('Due to a particular event',style: iUtills.normaltyleText,)
                               ],
                             ),
 
