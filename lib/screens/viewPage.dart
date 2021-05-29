@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_room/res.dart';
 import 'package:smart_room/screens/insight.dart';
@@ -15,7 +16,7 @@ class _ViewPageState extends State<ViewPage> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        title: Text("Home",style: TextStyle(fontSize: 20,color: Colors.black),),centerTitle: true,backgroundColor: Color(0xffF3F3F6),),
+        title: Text("View",style: TextStyle(fontSize: 20,color: Colors.black),),centerTitle: true,backgroundColor: Color(0xffF3F3F6),),
       backgroundColor: Apptheme.background,
       body: Container(
         width: MediaQuery.of(context).size.width,
@@ -37,9 +38,17 @@ class _ViewPageState extends State<ViewPage> {
   mCustomCard(@required var icon , @required var title){
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Container(
-        width: MediaQuery.of(context).size.width,height: 100,
-        child: Card(
+      child: Neumorphic(
+        style: NeumorphicStyle(
+            shape: NeumorphicShape.concave,
+            boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+            depth: 4,
+            lightSource: LightSource.topLeft,
+            color: Apptheme.background
+        ),
+        child: Container(
+          width: MediaQuery.of(context).size.width,height: 100,
+          color: Colors.transparent,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(

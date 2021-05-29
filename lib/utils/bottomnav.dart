@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:holding_gesture/holding_gesture.dart';
 import 'package:smart_room/res.dart';
@@ -46,89 +47,148 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
       },
       child: Scaffold(
         bottomNavigationBar:BottomAppBar(
+
           elevation: 0,
           color: Apptheme.background,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal:18.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
 
-                 GestureDetector(
-                   onTap: (){
-                     setState(() {
-                       _page = 0;
+                   GestureDetector(
+                     onTap: (){
+                       setState(() {
+                         _page = 0;
 
-                     });
-                   },
-                   child: Container(
-                width: 60,
-                height: 60,
-                child: _page == 0?SvgPicture.asset(Res.dash_active):SvgPicture.asset(Res.dash_inactive),
-              ),
-                 ),
-              GestureDetector(
-                onTap: (){
-                  setState(() {
-                    _page = 1;
-
-                  });
-                },
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  child: _page == 1?SvgPicture.asset(Res.viewpage_active):SvgPicture.asset(Res.viewpage_inactive),
+                       });
+                     },
+                     child: Neumorphic(
+                       style: NeumorphicStyle(
+                         shape: NeumorphicShape.concave,
+                         boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                         depth: 4,
+                         lightSource: LightSource.topLeft,
+                         color: Apptheme.background
+                       ),
+                       child: Container(
+                  width: 40,
+                  height: 40,
+                  color: Colors.transparent,
+                  child: _page == 0?Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: SvgPicture.asset(Res.dash_active,fit: BoxFit.cover,),
+                  ):Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: SvgPicture.asset(Res.dash_inactive),
+                  ),
                 ),
-              ),
-              GestureDetector(
+                     ),
+                   ),
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _page = 1;
 
-                onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatTwoPage()));
-                },
-                onTapDown: (val){
-                  setState(() {
-                    mIcon = Res.mic_pressed;
-
-                  });
-                },
-                onTapUp: (val){
-                  setState(() {
-                    mIcon = Res.mic;
-                  });
-                },
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  child: SvgPicture.asset(mIcon),
+                    });
+                  },
+                  child: Neumorphic(
+                    style: NeumorphicStyle(
+                      shape: NeumorphicShape.concave,
+                      boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                        depth: 4,
+                        lightSource: LightSource.topLeft,
+                        color: Apptheme.background
+                    ),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      child: _page == 1?Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: SvgPicture.asset(Res.viewpage_active),
+                      ):Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: SvgPicture.asset(Res.viewpage_inactive),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              GestureDetector(
-                onTap: (){
-                  setState(() {
-                    _page = 2;
+                GestureDetector(
 
-                  });
-                },
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  child: _page == 2?SvgPicture.asset(Res.home_active):SvgPicture.asset(Res.home_inactive),
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ChatTwoPage()));
+                  },
+                  onTapDown: (val){
+                    setState(() {
+                      mIcon = Res.mic_pressed;
+
+                    });
+                  },
+                  onTapUp: (val){
+                    setState(() {
+                      mIcon = Res.mic;
+                    });
+                  },
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    child: SvgPicture.asset(mIcon,),
+                  ),
                 ),
-              ),
-              GestureDetector(
-                onTap: (){
-                  setState(() {
-                    _page = 3;
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _page = 2;
 
-                  });
-                },
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  child: _page == 3?SvgPicture.asset(Res.setting_inactive):SvgPicture.asset(Res.setting_inactive),
+                    });
+                  },
+                  child: Neumorphic(
+                    style: NeumorphicStyle(
+                      shape: NeumorphicShape.concave,
+                      boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                        depth: 4,
+                        lightSource: LightSource.topLeft,
+                        color: Apptheme.background
+                    ),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      child: _page == 2?Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: SvgPicture.asset(Res.home_active),
+                      ):Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: SvgPicture.asset(Res.home_inactive),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
+                GestureDetector(
+                  onTap: (){
+                    setState(() {
+                      _page = 3;
+
+                    });
+                  },
+                  child: Neumorphic(
+                    style: NeumorphicStyle(
+                      shape: NeumorphicShape.concave,
+                      boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                        depth: 4,
+                        lightSource: LightSource.topLeft,
+                        color: Apptheme.background
+                    ),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      child: _page == 3?Icon(Icons.settings_outlined,color: Apptheme.primary,size: 22,):Icon(Icons.settings_outlined,color: Color(0xff9EB0BA),size: 22,),
+                    ),
+                  ),
+                ),
 
 
-            ],
+              ],
+            ),
           ),
         ),
         body: _tabs[_page],

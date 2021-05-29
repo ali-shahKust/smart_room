@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smart_room/res.dart';
 import 'package:smart_room/screens/colour.dart';
@@ -79,12 +80,28 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
               ),
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height/2,
-                child: SvgPicture.asset(Res.big_bulb),
-                
-              )
+
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Neumorphic(
+              style: NeumorphicStyle(
+                  shape: NeumorphicShape.convex,
+                  boxShape: NeumorphicBoxShape.circle(),
+                  depth: 4,
+                  lightSource: LightSource.topLeft,
+                  color: Apptheme.background
+              ),
+            child: Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height/2,
+              child: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: SvgPicture.asset(Res.big_bulb,),
+              ),
+
+            ),
+          ),
+        )
             ],
           ),
         ),

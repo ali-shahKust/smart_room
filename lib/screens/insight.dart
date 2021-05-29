@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:smart_room/screens/insight_explained.dart';
 import 'package:smart_room/utils/apptheme.dart';
@@ -13,6 +14,7 @@ class _InsightState extends State<Insight> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Apptheme.background,
       appBar: AppBar(
         leading: IconButton(onPressed: () { Navigator.pop(context); }, icon: Icon(Icons.arrow_back_ios,color: Colors.black,),) ,
         elevation: 0,
@@ -37,9 +39,14 @@ class _InsightState extends State<Insight> {
         onTap: (){
           Navigator.push(context, MaterialPageRoute(builder: (context)=>Insight_Explained()));
         },
-        child: Card(
-          elevation: 1.2,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        child: Neumorphic(
+          style: NeumorphicStyle(
+              shape: NeumorphicShape.concave,
+              boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+              depth: 4,
+              lightSource: LightSource.topLeft,
+              color: Apptheme.background
+          ),
           child: Padding(
             padding: const EdgeInsets.all(12.0),
             child: Row(

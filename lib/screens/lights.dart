@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:smart_room/res.dart';
@@ -24,15 +25,19 @@ class _LightsState extends State<Lights> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            mCustomWidget("Living Room light",        Theme(
-              data: ThemeData(
-                  switchTheme: SwitchThemeData(
-                    thumbColor: MaterialStateProperty.all(Colors.blueAccent),
+            mCustomWidget("Living Room light",    Container(
+              width: 50,
+              height: 35,
+              child: NeumorphicSwitch(
 
-                  )
-              ),
-              child: CupertinoSwitch(
-                  activeColor: Colors.black.withOpacity(0.12),
+                style: NeumorphicSwitchStyle(
+
+                  activeThumbColor: Apptheme.primary,
+                  inactiveThumbColor: Apptheme.background,
+                  activeTrackColor: Apptheme.background,
+                  inactiveTrackColor: Apptheme.background,
+                ),
+
                   value: lighroomBool, onChanged: (val){
                 lighroomBool = val;
                 setState(() {
@@ -61,15 +66,18 @@ class _LightsState extends State<Lights> {
                     },
                   ),
                 ), "off"),
-            mCustomWidget("Bedroom light",        Theme(
-              data: ThemeData(
-                  switchTheme: SwitchThemeData(
-                    thumbColor: MaterialStateProperty.all(Colors.blueAccent),
+            mCustomWidget("Bedroom light",        Container(  width: 50,
+              height: 35,
+              child: NeumorphicSwitch(
 
-                  )
-              ),
-              child: CupertinoSwitch(
-                  activeColor: Colors.black.withOpacity(0.12),
+                  style: NeumorphicSwitchStyle(
+
+                    activeThumbColor: Apptheme.primary,
+                    inactiveThumbColor: Apptheme.background,
+                    activeTrackColor: Apptheme.background,
+                    inactiveTrackColor: Apptheme.background,
+                  ),
+
                   value: bedroomBool, onChanged: (val){
                 bedroomBool = val;
                 setState(() {
@@ -101,15 +109,18 @@ class _LightsState extends State<Lights> {
 
 
 
-            mCustomWidget("Kitchen light",Theme(
-              data: ThemeData(
-                  switchTheme: SwitchThemeData(
-                    thumbColor: MaterialStateProperty.all(Colors.blueAccent),
+            mCustomWidget("Kitchen light",Container(  width: 50,
+              height: 35,
+              child: NeumorphicSwitch(
 
-                  )
-              ),
-              child: CupertinoSwitch(
-                  activeColor: Colors.black.withOpacity(0.12),
+                  style: NeumorphicSwitchStyle(
+
+                    activeThumbColor: Apptheme.primary,
+                    inactiveThumbColor: Apptheme.background,
+                    activeTrackColor: Apptheme.background,
+                    inactiveTrackColor: Apptheme.background,
+                  ),
+
                   value: kitchenroomBool, onChanged: (val){
                 kitchenroomBool = val;
                 setState(() {
@@ -130,6 +141,7 @@ class _LightsState extends State<Lights> {
                     overlayShape: RoundSliderOverlayShape(overlayRadius: 12.0),
                   ),
                   child: Slider(
+
                     value: kitchensliderValue,
                     onChanged: (v){
                       setState(() {
@@ -147,13 +159,15 @@ class _LightsState extends State<Lights> {
   mCustomWidget(@required var title,@required var switchBtn,@required var percent,@required var subtitle,){
     return Padding(
       padding: const EdgeInsets.all(18.0),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14) ,
-          gradient:   LinearGradient(
-            colors: <Color>[Color(0xff000000).withOpacity(0.022), Colors.black.withOpacity(0.011)],
+      child:
+      Neumorphic(
+          style: NeumorphicStyle(
+              shape: NeumorphicShape.concave,
+              boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+              depth: 4,
+              lightSource: LightSource.topLeft,
+              color: Apptheme.background
           ),
-        ),
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical:12.0,horizontal: 12),
           child: Container(
@@ -165,7 +179,7 @@ class _LightsState extends State<Lights> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width-120,
+                      width: MediaQuery.of(context).size.width-150,
 
                       child: Row(
                         children: [
@@ -187,7 +201,7 @@ class _LightsState extends State<Lights> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(subtitle,style: TextStyle(fontSize: 15,fontWeight: FontWeight.w300),),
-                    
+
                       Image.asset(Res.colors,width: 30,height: 30,)
                     ],
                 )
