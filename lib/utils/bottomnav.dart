@@ -130,9 +130,9 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
                     });
                   },
                   child: Container(
-                    width: 60,
-                    height: 60,
-                    child: SvgPicture.asset(mIcon,),
+                    width: 90,
+                    height: 90,
+                    child: SvgPicture.asset(mIcon,fit: BoxFit.fill,),
                   ),
                 ),
                 GestureDetector(
