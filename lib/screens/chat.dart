@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'dart:math';
@@ -163,51 +164,63 @@ class _ChatTwoPageState extends State<ChatTwoPage> {
             crossAxisAlignment:
             current ? CrossAxisAlignment.end : CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
-                constraints: BoxConstraints(
-                  minHeight: 40,
-                  maxHeight: 250,
-                  maxWidth: MediaQuery.of(context).size.width * 0.7,
-                  minWidth: MediaQuery.of(context).size.width * 0.1,
+              Neumorphic(
+                style: NeumorphicStyle(
+                    shape: NeumorphicShape.concave,
+                    boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(12)),
+                    depth: 4,
+                    lightSource: LightSource.topLeft,
+                  color: current ? Apptheme.primary : Apptheme.background,
                 ),
-                decoration: BoxDecoration(
-                  color: current ? Apptheme.primary : Colors.white,
-                  borderRadius: current
-                      ? BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    bottomLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  )
-                      : BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    bottomRight: Radius.circular(20),
-                    topRight: Radius.circular(20),
+                child: Container(
+                  constraints: BoxConstraints(
+                    minHeight: 40,
+                    maxHeight: 250,
+                    maxWidth: MediaQuery.of(context).size.width * 0.7,
+                    minWidth: MediaQuery.of(context).size.width * 0.1,
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: 15, top: 10, bottom: 5, right: 5),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: current
-                        ? CrossAxisAlignment.end
-                        : CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Padding(
-                        padding: const EdgeInsets.only(right: 10),
-                        child: Text(
-                          message.description,
-                          style: TextStyle(
-                            color: current ? Colors.white : Colors.black,
+                  decoration: BoxDecoration(
+
+                    borderRadius: current
+                        ? BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    )
+                        : BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 15, top: 10, bottom: 5, right: 5),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      crossAxisAlignment: current
+                          ? CrossAxisAlignment.end
+                          : CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(right: 10),
+                          child: Text(
+                            message.description,
+                            style: TextStyle(
+                              color: current ? Colors.white : Colors.black,
+                            ),
                           ),
                         ),
-                      ),
-                      Icon(
-                        Icons.done_all,
-                        color: Colors.white,
-                        size: 14,
-                      )
-                    ],
+                        NeumorphicIcon(
+                          Icons.done_all,
+                          style: NeumorphicStyle(
+                            color: current?Colors.white:Colors.grey,
+
+                          ),
+                          size: 14,
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),
