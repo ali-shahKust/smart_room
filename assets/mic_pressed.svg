@@ -1,48 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="107" height="107.805" viewBox="0 0 107 107.805">
-  <defs>
-    <filter id="scale-white-color-0" x="12" y="12.805" width="95" height="95" filterUnits="userSpaceOnUse">
-      <feOffset dx="6" dy="6" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feFlood flood-color="#080821" flood-opacity="0.059"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-    <filter id="scale-white-color-0-2" x="0" y="0.805" width="95" height="95" filterUnits="userSpaceOnUse">
-      <feOffset dx="-6" dy="-6" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="6" result="blur-2"/>
-      <feFlood flood-color="#fff" flood-opacity="0.702"/>
-      <feComposite operator="in" in2="blur-2"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_1739" data-name="Group 1739" transform="translate(-134 -689.195)">
-    <g id="Group_1631" data-name="Group 1631">
-      <g id="up_light_btn" transform="translate(158.108 714)">
-        <g id="Group_38" data-name="Group 38" transform="translate(0 0)">
-          <g transform="matrix(1, 0, 0, 1, -24.11, -24.8)" filter="url(#scale-white-color-0)">
-            <rect id="scale-white-color-0-3" data-name="scale-white-color-0" width="59" height="59" rx="20" transform="translate(24 24.8)" fill="#f3f3f6"/>
-          </g>
-          <g transform="matrix(1, 0, 0, 1, -24.11, -24.8)" filter="url(#scale-white-color-0-2)">
-            <rect id="scale-white-color-0-4" data-name="scale-white-color-0" width="59" height="59" rx="10" transform="translate(24 24.8)" fill="#f3f3f6"/>
-          </g>
-        </g>
-        <g id="scale-white-color-0-5" data-name="scale-white-color-0" transform="translate(-0.108 0)" fill="none" stroke="#ebebeb" stroke-width="0.5" opacity="0.16">
-          <rect width="59" height="59" rx="20" stroke="none"/>
-          <rect x="0.25" y="0.25" width="58.5" height="58.5" rx="19.75" fill="none"/>
-        </g>
-        <rect id="scale-white-color-0-6" data-name="scale-white-color-0" width="59" height="59" rx="10" transform="translate(-0.108 0)" fill="#22aae2"/>
-      </g>
-      <g id="microphone-black-shape" transform="translate(179.671 732.192)">
+<svg xmlns="http://www.w3.org/2000/svg" width="67.474" height="116.822" viewBox="0 0 67.474 116.822">
+  <g id="Group_1738" data-name="Group 1738" transform="translate(-671.421 -1847.195)">
+    <g id="Group_1736" data-name="Group 1736">
+      <g id="microphone-black-shape" transform="translate(685.949 1908.526)">
         <g id="Group_125" data-name="Group 125" transform="translate(0)">
-          <path id="Path_273" data-name="Path 273" d="M150.528,15.657a4.361,4.361,0,0,0,4.349-4.349V4.349A4.187,4.187,0,0,0,153.6,1.278a4.331,4.331,0,0,0-6.143,0,4.188,4.188,0,0,0-1.278,3.072v6.959a4.361,4.361,0,0,0,4.349,4.349Z" transform="translate(-142.7)" fill="#fff"/>
-          <path id="Path_274" data-name="Path 274" d="M88.486,182.982a.87.87,0,0,0-1.481.611v1.74a6.089,6.089,0,0,1-12.178,0v-1.74a.87.87,0,0,0-1.74,0v1.74a7.828,7.828,0,0,0,6.959,7.774V194.9H76.566a.87.87,0,0,0,0,1.74h8.7a.87.87,0,0,0,0-1.74H81.786v-1.794a7.829,7.829,0,0,0,6.959-7.774v-1.74A.836.836,0,0,0,88.486,182.982Z" transform="translate(-73.087 -174.026)" fill="#fff"/>
+          <path id="Path_273" data-name="Path 273" d="M156.85,38.416a10.7,10.7,0,0,0,10.671-10.67V10.672a10.274,10.274,0,0,0-3.134-7.537,10.626,10.626,0,0,0-15.073,0,10.275,10.275,0,0,0-3.135,7.537V27.745a10.7,10.7,0,0,0,10.671,10.67Z" transform="translate(-137.642)" fill="#22aae2"/>
+          <path id="Path_274" data-name="Path 274" d="M110.87,183.358a2.134,2.134,0,0,0-3.634,1.5v4.269a14.927,14.927,0,0,1-25.495,10.554,14.386,14.386,0,0,1-4.385-10.554v-4.269a2.134,2.134,0,0,0-4.269,0v4.269A19.206,19.206,0,0,0,90.161,208.2v4.4H81.624a2.135,2.135,0,0,0,0,4.269h21.342a2.135,2.135,0,0,0,0-4.269H94.43v-4.4A19.208,19.208,0,0,0,111.5,189.127v-4.269A2.05,2.05,0,0,0,110.87,183.358Z" transform="translate(-73.087 -161.382)" fill="#22aae2"/>
         </g>
       </g>
-    </g>
-    <g id="Group_198" data-name="Group 198" transform="translate(-1474.065 -529.474)">
-      <path id="Path_316" data-name="Path 316" d="M3.464,12.2A12.864,12.864,0,0,1,.9,19.886,2.506,2.506,0,1,0,4.9,22.9,17.911,17.911,0,0,0,8.476,12.2,17.846,17.846,0,0,0,4.445.918,2.506,2.506,0,1,0,.568,4.094,12.825,12.825,0,0,1,3.464,12.2Zm0,0" transform="translate(1649.853 1237.087) rotate(-90)" fill="#22aae2"/>
-      <path id="Path_317" data-name="Path 317" d="M6.125,18.987A22.8,22.8,0,0,1,1.032,33.327a2.506,2.506,0,1,0,3.889,3.162,27.824,27.824,0,0,0,6.216-17.5A27.752,27.752,0,0,0,4.4.869a2.506,2.506,0,0,0-3.8,3.274A22.735,22.735,0,0,1,6.125,18.987Zm0,0" transform="translate(1643.065 1229.807) rotate(-90)" fill="#22aae2"/>
-      <path id="Path_318" data-name="Path 318" d="M7.86,15.72A7.86,7.86,0,1,0,0,7.86,7.869,7.869,0,0,0,7.86,15.72Zm0,0" transform="translate(1654.192 1254.279) rotate(-90)" fill="#22aae2"/>
+      <g id="Group_1735" data-name="Group 1735" transform="translate(671.421 1847.195)">
+        <path id="Path_316" data-name="Path 316" d="M6.247,22A23.2,23.2,0,0,1,1.616,35.864,4.52,4.52,0,1,0,8.841,41.3,32.3,32.3,0,0,0,15.287,22,32.184,32.184,0,0,0,8.016,1.655,4.52,4.52,0,1,0,1.024,7.383,23.13,23.13,0,0,1,6.247,22Zm0,0" transform="translate(12.242 33.215) rotate(-90)" fill="#22aae2"/>
+        <path id="Path_548" data-name="Path 548" d="M4.423,15.579a16.427,16.427,0,0,1-3.279,9.816A3.2,3.2,0,1,0,6.26,29.242a22.873,22.873,0,0,0,4.565-13.663A22.789,22.789,0,0,0,5.676,1.172,3.2,3.2,0,1,0,.725,5.228,16.378,16.378,0,0,1,4.423,15.579Zm0,0" transform="translate(18.533 48.382) rotate(-90)" fill="#22aae2"/>
+        <path id="Path_317" data-name="Path 317" d="M11.046,34.243A41.116,41.116,0,0,1,1.862,60.1a4.52,4.52,0,1,0,7.014,5.7A50.18,50.18,0,0,0,20.086,34.243,50.05,50.05,0,0,0,7.943,1.568,4.52,4.52,0,0,0,1.1,7.472,41,41,0,0,1,11.046,34.243Zm0,0" transform="translate(0 20.086) rotate(-90)" fill="#22aae2"/>
+      </g>
     </g>
   </g>
 </svg>

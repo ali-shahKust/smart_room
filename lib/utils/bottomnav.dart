@@ -137,11 +137,7 @@ class _Bottom_Nav_PageState extends State<Bottom_Nav_Page> {
                         lightSource: LightSource.topLeft,
                         color: Apptheme.background
                     ),
-                    child: Container(
-                      width: 70,
-                      height: 70,
-                      child: SvgPicture.asset(mIcon,fit: BoxFit.fill,width: 60,height: 70,),
-                    ),
+                    child: SvgPicture.asset(mIcon,fit: BoxFit.fill,width: 80,height: 80,),
                   ),
                 ),
                 GestureDetector(
